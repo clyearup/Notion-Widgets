@@ -11,14 +11,7 @@
 
     <!-- Styles -->
     <link href="./css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="./css/header.css" rel="stylesheet" type="text/css">
-    <link href="./css/navbar.css" rel="stylesheet" type="text/css">
     <link href="./css/recipetoollayout.css" rel="stylesheet" type="text/css">
-    <link href="./css/sitemaplinks.css" rel="stylesheet" type="text/css">
-    <link href="./css/appad.css" rel="stylesheet" type="text/css">
-    <link href="./css/applinks.css" rel="stylesheet" type="text/css">
-    <link href="./css/footer.css" rel="stylesheet" type="text/css">
-    <link href="./css/floatingtopbutton.css" rel="stylesheet" type="text/css">
 
     <style>
         #mainContainer div, #mainContainer input, #mainContainer textarea, #mainContainer button, #mainContainer p {
@@ -48,9 +41,6 @@
             -webkit-text-size-adjust: 100%;
         }
     </style>
-    <script src="./js/header_min.js"></script>
-    <script src="./js/sideMenuLinks_min.js"></script>
-    <script src="./js/navBar_min.js"></script>
     <script src="./js/initHeaders.js"></script>
 
 </head>
@@ -60,25 +50,17 @@
     <main id="mainContainer">
         <section id="contentContainer">
             <div id="toolContainer" class="content-section">
-                <div class="tool-title-block">
-                    <h1 class="center no-margin">
-                        Recipe Converter
-                    </h1>
-                </div>
-
+                
                 <div id="converterTool">
                     <div id="recipeInput">
                         <div class="row title">
                             <div>
                                 Recipe Title
                             </div>
-                            <div>
-                                <a href="https://mykitchencalculator.com/vhowtouserecipeconverter.html" target="_blank">Video Tutorial</a>
-                            </div>
                         </div>
 
                         <div class="row">
-                            <input id="recipeTitle" type="text" value="" placeholder="Enter the recipe title. (Optional)">
+                            <input id="recipeTitle" type="text" value="" placeholder="(Optional)">
                         </div>
 
                         <div class="row title">
@@ -86,7 +68,7 @@
                                 Ingredient List
                             </div>
                             <div>
-                                <button class="btnR" id="clearListButton" onclick="clearList()">Clear List</button>
+                                <button class="btnR" id="clearListButton" onclick="clearList()">Clear</button>
                             </div>
                         </div>
 
@@ -96,10 +78,10 @@
 
                         <div class="row tabs" id="tabs">
                             <div class="tab">
-                                <button id="multiplierTab" onclick="changeTab(this)" style="background-color: rgb(153, 153, 153);">Convert by Multiplier</button>
+                                <button id="multiplierTab" onclick="changeTab(this)" style="background-color: rgb(153, 153, 153);">Multiplier</button>
                             </div>
                             <div class="tab">
-                                <button id="portionTab" onclick="changeTab(this)" style="background-color: rgb(238, 238, 238);">Convert by Portion</button>
+                                <button id="portionTab" onclick="changeTab(this)" style="background-color: rgb(238, 238, 238);">Portion</button>
                             </div>
                         </div>
 
@@ -120,9 +102,9 @@
                                 <div id="mText">
                                     <input id="multiplier" type="text" placeholder="Multiplier" onclick="clearText(this)">
                                 </div>
-                                <button class="btn" id="multiplyButton" onclick="multiply()">× Multiply</button>
+                                <button class="btn" id="multiplyButton" onclick="multiply()">×</button>
 
-                                <button class="btn" id="divideButton" onclick="divide()">÷ Divide</button>
+                                <button class="btn" id="divideButton" onclick="divide()">÷</button>
                             </div>
                         </div>
 
@@ -133,10 +115,10 @@
                                     &nbsp;
                                 </div>
                                 <div id="oyieldLabel">
-                                    Original Size
+                                    Original
                                 </div>
                                 <div id="dyieldLabel">
-                                    Desired Size
+                                    Desired
                                 </div>
                             </div>
 
@@ -154,17 +136,6 @@
                                 <button class="btn" id="portionButton" onclick="portion()">Portion</button>
                             </div>
                         </div>
-
-                        <div class="row bottom-note">
-                            <div id="howNote">
-                                <a href="/howtouserecipeconverter.html" target="_blank">How to use the recipe
-                                    converter</a>
-                            </div>
-                            <div id="tipNote">
-                                <a href="/howtoadvancedtips.html" target="_blank">Advanced Tips</a>
-                            </div>
-                        </div>
-
                     </div>
 
                     <div id="convertedBlock">
@@ -175,15 +146,7 @@
                             <textarea id="recipeout"></textarea>
                         </div>
                         <div class="row buttons" id="convertedButtons">
-                            <button class="btn2" id="printRecipeButton" onclick="printPad()">Print Recipe</button>
-
                             <button class="btnR" id="clearRecipeButton" onclick="clearPad()">Clear</button>
-                        </div>
-                        <div class="row bottom-note">
-                            <div id="saveNote">
-                                <a href="/howtosaverecipeconversion.html" target="_blank">How do I save a
-                                    conversion?</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -193,10 +156,6 @@
     </main>
 
     <!-- Scripts -->
-    <script src="./js/appLinks_min.js"></script>
-    <script src="./js/sitemapLinks_min.js"></script>
-    <script src="./js/footer_min.js"></script>
-    <script src="./js/floatingTopButton_min.js"></script>
     <script src="./js/recipeConverterViewController.js"></script>
     <script src="./js/rconvert4.min.js"></script>
     <script src="./js/initTemplate_2.js"></script>

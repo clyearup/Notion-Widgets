@@ -4,49 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kitchen Conversion Widget</title>
     <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:700|Roboto:300,900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="./css/recipetoollayout.css" rel="stylesheet" type="text/css">
-
-    <style>
-        #mainContainer div, #mainContainer input, #mainContainer textarea, #mainContainer button, #mainContainer p {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-        }
-        #converterTool {
-            font-size: 16px;
-            margin: 5px auto;
-        }
-        #converterTool {
-            display: flex;
-            flex-wrap: wrap;
-            font-size: 16px;
-            width: 100%;
-            color: #333;
-            margin: 5px auto;
-        }
-        * {
-            font-family: 'Roboto', sans-serif;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-        }
-        html {
-            line-height: 1.15;
-            -webkit-text-size-adjust: 100%;
-        }
-    </style>
-    <script src="./js/initHeaders.js"></script>
+    <link href="normalize.css" rel="stylesheet" type="text/css">
+    <link href="recipetoollayout.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-    <script>initHeaders();</script>
-
     <main id="mainContainer">
         <section id="contentContainer">
             <div id="toolContainer" class="content-section">
@@ -154,13 +122,27 @@
             
         </section>
     </main>
-
     <!-- Scripts -->
-    <script src="./js/recipeConverterViewController.js"></script>
-    <script src="./js/rconvert4.min.js"></script>
-    <script src="./js/initTemplate_2.js"></script>
-    <script>initTemplate();</script>
+    <script src="recipeConverterViewController.js"></script>
+    <script src="rconvert4.min.js"></script>
+    <script type="text/javascript">
+        (function(d, w) { 
+            var x = d.getElementsByTagName('SCRIPT')[0]; 
+            var f = function() { 
+                var _id = 'lexity-pixel'; 
+                var _s = d.createElement('script'); 
 
-<script type="text/javascript"> (function(d, w) { var x = d.getElementsByTagName('SCRIPT')[0]; var f = function() { var _id = 'lexity-pixel'; var _s = d.createElement('script'); _s.id = _id; _s.type = 'text/javascript'; _s.async = true; _s.src = "//np.lexity.com/embed/YW/1e871dc4c653359d3d53ac9d9cb18721?id=a1209de7875f"; if (!document.getElementById(_id)) { x.parentNode.insertBefore(_s, x); } }; w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); }(document, window)); </script>
+                _s.id = _id; _s.type = 'text/javascript'; 
+                _s.async = true; 
+                _s.src = "//np.lexity.com/embed/YW/1e871dc4c653359d3d53ac9d9cb18721?id=a1209de7875f"; 
+            
+                if (!document.getElementById(_id)) {
+                    x.parentNode.insertBefore(_s, x); 
+                } 
+            }; 
+            w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); 
+        }
+        (document, window)); 
+    </script>
 </body>
 </html>

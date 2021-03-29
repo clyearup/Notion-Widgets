@@ -6,7 +6,7 @@
 }
 
 #contentContainer {
-    width: 50%;
+    width: 100%;
 }
 
 #contentContainer img {
@@ -38,13 +38,13 @@
 #mainContainer p {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    font-size: 12px;
+    font-size: 8px;
     margin: 5px;
-    line-height: 0.8;
+    line-height: 1;
 }
 
 #mainContainer ol {
-    font-size: 12px;
+    font-size: 8px;
     line-height: 1;
     margin: 5px auto;
     padding: 0 5px 0 5px;
@@ -52,7 +52,7 @@
 
 
 #mainContainer li {
-    font-size: 18px;
+    font-size: 8px;
     margin: 0;
 }
 
@@ -210,8 +210,8 @@
 #converterTool {
     display: flex;
     flex-wrap: wrap;
-    font-size: 12px;
-    width: 40%;
+    font-size: 8px;
+    width: 50%;
     color: #333;
     margin: 5px auto;
 }
@@ -228,7 +228,7 @@
 
 #recipeTitle {
     width: 100%;
-    font-size: 12px;
+    font-size: 8px;
 }
 
 #recipein {
@@ -365,15 +365,6 @@
 
 
 @media only screen and (min-width: 768px) {
-    #mainContainer ol {
-        padding: 25px;
-    }
-
-    #mainContainer li {
-        font-size: 18px;
-        margin: 0 10px;
-    }
-
     #converterTool {
         font-size: 8px;
         margin: 5px auto;
@@ -412,7 +403,7 @@
 }
 
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 768px) {
 
     #mainContainer .content-section {
         max-width: 500px;
@@ -423,7 +414,7 @@
         clear: none;
         display: block;
         float: left;
-        height: 250px;
+        height: 260px;
         width: 49.75%;
         margin-left: 0;
         color: #eee;
@@ -434,7 +425,7 @@
         clear: none;
         display: block;
         float: left;
-        height: 250px;
+        height: 260px;
         width: 49.75%;
         margin-top: 0;
         color: #eee;

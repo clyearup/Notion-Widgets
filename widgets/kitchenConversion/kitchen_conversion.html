@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700|Roboto:300,900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./css/header.css" rel="stylesheet" type="text/css">
+    <link href="./css/navbar.css" rel="stylesheet" type="text/css">
+    <link href="./css/recipetoollayout.css" rel="stylesheet" type="text/css">
+    <link href="./css/sitemaplinks.css" rel="stylesheet" type="text/css">
+    <link href="./css/appad.css" rel="stylesheet" type="text/css">
+    <link href="./css/applinks.css" rel="stylesheet" type="text/css">
+    <link href="./css/footer.css" rel="stylesheet" type="text/css">
+    <link href="./css/floatingtopbutton.css" rel="stylesheet" type="text/css">
+
+    <style>
+        #mainContainer div, #mainContainer input, #mainContainer textarea, #mainContainer button, #mainContainer p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+        }
+        #converterTool {
+            font-size: 16px;
+            margin: 5px auto;
+        }
+        #converterTool {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 16px;
+            width: 100%;
+            color: #333;
+            margin: 5px auto;
+        }
+        * {
+            font-family: 'Roboto', sans-serif;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+    </style>
+    <script src="./js/header_min.js"></script>
+    <script src="./js/sideMenuLinks_min.js"></script>
+    <script src="./js/navBar_min.js"></script>
+    <script src="./js/initHeaders.js"></script>
+
+</head>
+<body>
+    <script>initHeaders();</script>
+
+    <main id="mainContainer">
+        <section id="contentContainer">
+            <div id="toolContainer" class="content-section">
+                <div class="tool-title-block">
+                    <h1 class="center no-margin">
+                        Recipe Converter
+                    </h1>
+                </div>
+
+                <div id="converterTool">
+                    <div id="recipeInput">
+                        <div class="row title">
+                            <div>
+                                Recipe Title
+                            </div>
+                            <div>
+                                <a href="https://mykitchencalculator.com/vhowtouserecipeconverter.html" target="_blank">Video Tutorial</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <input id="recipeTitle" type="text" value="" placeholder="Enter the recipe title. (Optional)">
+                        </div>
+
+                        <div class="row title">
+                            <div>
+                                Ingredient List
+                            </div>
+                            <div>
+                                <button class="btnR" id="clearListButton" onclick="clearList()">Clear List</button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <textarea id="recipein" placeholder="Type in or paste the ingredients section here."></textarea>
+                        </div>
+
+                        <div class="row checkbox">
+                            <input type="checkbox" id="fractionyes" checked=""> Round conversion to nearest cooking
+                            fraction. (Nearest 1/8th)
+                        </div>
+
+                        <div class="row checkbox">
+                            <input type="checkbox" id="originalyes"> Include original recipe in conversion.
+                        </div>
+
+                        <div class="row tabs" id="tabs">
+                            <div class="tab">
+                                <button id="multiplierTab" onclick="changeTab(this)" style="background-color: rgb(153, 153, 153);">Convert by Multiplier</button>
+                            </div>
+                            <div class="tab">
+                                <button id="portionTab" onclick="changeTab(this)" style="background-color: rgb(238, 238, 238);">Convert by Portion</button>
+                            </div>
+                        </div>
+
+                        <div id="multiplierBlock" style="display: none;">
+
+                            <div class="inputTop">
+                                <div class="opertop">
+                                    &nbsp;
+                                </div>
+                                <div id="multiLabel">
+                                    Multiplier
+                                </div>
+
+                            </div>
+
+                            <div class="inputBar">
+                                <div id="oper"></div>
+                                <div id="mText">
+                                    <input id="multiplier" type="text" placeholder="Multiplier" onclick="clearText(this)">
+                                </div>
+                                <button class="btn" id="multiplyButton" onclick="multiply()">× Multiply</button>
+
+                                <button class="btn" id="divideButton" onclick="divide()">÷ Divide</button>
+                            </div>
+                        </div>
+
+
+                        <div id="portionBlock" style="display: block;">
+                            <div class="inputTop">
+                                <div class="opertop">
+                                    &nbsp;
+                                </div>
+                                <div id="oyieldLabel">
+                                    Original Size
+                                </div>
+                                <div id="dyieldLabel">
+                                    Desired Size
+                                </div>
+                            </div>
+
+                            <div class="inputBar">
+                                <div id="empty">
+                                    &nbsp;
+                                </div>
+                                <div id="oText">
+                                    <input id="oyield" type="text" placeholder="Original" onclick="clearText(this)">
+                                </div>
+                                <div id="dText">
+                                    <input id="dyield" type="text" placeholder="Desired" onclick="clearText(this)">
+                                </div>
+
+                                <button class="btn" id="portionButton" onclick="portion()">Portion</button>
+                            </div>
+                        </div>
+
+                        <div class="row bottom-note">
+                            <div id="howNote">
+                                <a href="/howtouserecipeconverter.html" target="_blank">How to use the recipe
+                                    converter</a>
+                            </div>
+                            <div id="tipNote">
+                                <a href="/howtoadvancedtips.html" target="_blank">Advanced Tips</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="convertedBlock">
+                        <div class="row title" id="cTopText">
+                            Converted Recipe
+                        </div>
+                        <div class="row" id="conversionOut">
+                            <textarea id="recipeout"></textarea>
+                        </div>
+                        <div class="row buttons" id="convertedButtons">
+                            <button class="btn2" id="printRecipeButton" onclick="printPad()">Print Recipe</button>
+
+                            <button class="btnR" id="clearRecipeButton" onclick="clearPad()">Clear</button>
+                        </div>
+                        <div class="row bottom-note">
+                            <div id="saveNote">
+                                <a href="/howtosaverecipeconversion.html" target="_blank">How do I save a
+                                    conversion?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <div id="floatingTopButton" style="visibility: visible;">
+        <div class="floating-top-button">
+            <i id="floatingTopIcon" class="material-icons">
+                expand_less
+            </i>
+        </div>
+        <span id="floatingTopText">Top</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/appLinks_min.js"></script>
+    <script src="./js/sitemapLinks_min.js"></script>
+    <script src="./js/footer_min.js"></script>
+    <script src="./js/floatingTopButton_min.js"></script>
+    <script src="./js/recipeConverterViewController.js"></script>
+    <script src="./js/rconvert4.min.js"></script>
+    <script src="./js/initTemplate_2.js"></script>
+    <script>initTemplate();</script>
+
+<script type="text/javascript"> (function(d, w) { var x = d.getElementsByTagName('SCRIPT')[0]; var f = function() { var _id = 'lexity-pixel'; var _s = d.createElement('script'); _s.id = _id; _s.type = 'text/javascript'; _s.async = true; _s.src = "//np.lexity.com/embed/YW/1e871dc4c653359d3d53ac9d9cb18721?id=a1209de7875f"; if (!document.getElementById(_id)) { x.parentNode.insertBefore(_s, x); } }; w.attachEvent ? w.attachEvent('onload', f) : w.addEventListener('load', f, false); }(document, window)); </script>
+</body>
+</html>

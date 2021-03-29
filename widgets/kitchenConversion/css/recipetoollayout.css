@@ -1,0 +1,657 @@
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+#contentContainer {
+    width: 100%;
+}
+
+#contentContainer img {
+    max-width: 100%;
+}
+
+#mainContainer div,
+#mainContainer input,
+#mainContainer textarea,
+#mainContainer button,
+#mainContainer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#mainContainer input {
+    padding: 2px;
+}
+
+#mainContainer textarea {
+    resize: none;
+    padding: 2px;
+}
+
+#mainContainer h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin: 5px 15px;
+}
+
+#mainContainer h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#mainContainer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 15px;
+    line-height: 1.4;
+}
+
+#mainContainer ol {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 15px auto;
+    padding: 0 10px 0 25px;
+}
+
+
+#mainContainer li {
+    font-size: 18px;
+    margin: 0;
+}
+
+#mainContainer a:link,
+#mainContainer a:visited {
+    color: black;
+}
+
+#mainContainer a:hover,
+#mainContainer a:active {
+    color: dodgerblue;
+}
+
+
+
+#mainContainer .content-section {
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+#mainContainer .content-section.card-style {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 gray;
+    margin: 15px auto;
+}
+
+#recipeConverterInstructions h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#mainContainer .tool-title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+}
+
+#mainContainer .share-block {
+    margin: 5px;
+}
+
+#mainContainer .share-icon {
+    margin: 0 5px;
+}
+
+#mainContainer .center {
+    text-align: center;
+}
+
+#mainContainer .bold {
+    font-weight: bold;
+}
+
+#mainContainer .normal-font-weight {
+    font-weight: 300;
+}
+
+#mainContainer .underline {
+    text-decoration: underline;
+}
+
+#mainContainer .left-margin {
+    margin-left: 25px;
+}
+
+#mainContainer .no-margin {
+    margin: 0;
+}
+
+#mainContainer .bg-light-gray {
+    background-color: #f0f0f0;
+}
+
+#mainContainer .top-border {
+    border-top: 1px solid #ccc;
+}
+
+#mainContainer .lower-alpha {
+    list-style-type: lower-alpha;
+}
+
+#mainContainer .ad-unit {
+    text-align: center;
+    margin: 5px auto;
+}
+
+#recipeInput a:link,
+#recipeInput a:visited {
+    color: white;
+}
+
+#recipeInput a:hover,
+#recipeInput a:active {
+    color: #6cf;
+}
+
+#convertedBlock a:link,
+#convertedBlock a:visited {
+    color: white;
+}
+
+#convertedBlock a:hover,
+#convertedBlock a:active {
+    color: #6cf;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 20px 5px 10px;
+}
+
+.row.buttons {
+    margin-top: 10px;
+}
+
+.row.bottom-note {
+    margin: 30px 20px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.row.bottom-note div {
+    margin-bottom: 10px;
+}
+
+.row.title {
+    margin: 10px 20px 0 10px;
+}
+
+.row.checkbox {
+    align-items: baseline;
+    justify-content: flex-start;
+    margin: 20px 20px 20px 10px;
+}
+
+.row [type="checkbox"] {
+    margin-right: 5px;
+}
+
+.row.tabs {
+    overflow: hidden;
+}
+
+.row.tabs .tab {
+    width: 50%;
+}
+
+
+#recipeTitle {
+    height: 40px;
+}
+
+#howNote {
+    margin-right: 10px;
+}
+
+#recipeConverterInstructions img {
+    margin: 20px 0;
+}
+
+/* -- Note box -- */
+#contentContainer .content-section .note-container {
+    display: flex;
+    align-items: center;
+    background-color: #cef;
+    padding: 20px 20px 20px 50px;
+    margin: 5px 0 20px 0;
+}
+
+#contentContainer .content-section .note {
+    color: #069;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+#contentContainer .content-section .note a {
+    color: #069;
+    font-size: 14px;
+    line-height: 150%;
+    text-decoration: underline;
+}
+
+#contentContainer .content-section .note::before {
+    content: "warning";
+    font-family: "Material Icons";
+    font-feature-settings: "liga";
+    font-size: 24px;
+    float: left;
+    margin-left: -36px;
+}
+
+
+/* -- Example box -- */
+#contentContainer .content-section .example-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+#contentContainer .content-section .example-container::before {
+    content: "example:";
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+#contentContainer .content-section .example-container p {
+    margin: 0;
+    font-size: 16px;
+}
+
+#contentContainer .content-section .example-container ul {
+    margin: 5px 0px;
+    padding: 0 20px;
+}
+
+#contentContainer .content-section .example-container li {
+    font-size: 16px;
+    margin: 5px 0px;
+}
+
+
+#converterTool {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    width: 100%;
+    color: #333;
+    margin: 5px auto;
+}
+
+#recipeInput {
+    clear: both;
+    display: block;
+    float: left;
+    height: auto;
+    width: 100%;
+    color: #eee;
+    background-color: #333;
+}
+
+#recipeTitle {
+    width: 100%;
+    font-size: 16px;
+}
+
+#recipein {
+    width: 100%;
+    font-size: 16px;
+    height: 280px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#multiplierTab {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    background-color: #eee;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#portionTab {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    background-color: #999;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+#multiLabel,
+#oyieldLabel,
+#dyieldLabel {
+    clear: none;
+    display: block;
+    float: left;
+    width: 28%;
+    height: auto;
+    font-size: 14px;
+    margin: 5px 0px 0px 2%;
+    color: #555;
+}
+
+#oper,
+#empty {
+    clear: none;
+    display: block;
+    float: left;
+    width: 5%;
+    height: 50px;
+    text-align: right;
+    font-size: 20px;
+    line-height: 50px;
+    color: #555;
+    margin-left: 2%;
+}
+
+#mText,
+#oText,
+#dText {
+    clear: none;
+    display: block;
+    float: left;
+    width: 28%;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 2%;
+    color: #555;
+}
+
+#multiplier,
+#oyield,
+#dyield {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+
+#multiplyButton {
+    width: 28%;
+    height: 50px;
+    font-size: 12px;
+    margin-left: 2%;
+    background-color: #b8edff;
+}
+
+#multiplyButton span,
+#divideButton span {
+    font-size: 24px;
+}
+
+#divideButton {
+    width: 28%;
+    height: 50px;
+    font-size: 12px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #d0b2e7;
+}
+
+#portionButton {
+    width: 28%;
+    height: 50px;
+    font-size: 12px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #c9e4a5;
+}
+
+#convertedBlock {
+    clear: both;
+    display: block;
+    float: left;
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+    color: #eee;
+    background-color: #333;
+}
+
+#recipeout {
+    width: 100%;
+    height: 280px;
+    font-size: 16px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    #mainContainer h1 {
+        font-size: 40px;
+    }
+
+    #mainContainer ol {
+        padding: 25px;
+    }
+
+    #mainContainer li {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    #converterTool {
+        font-size: 16px;
+        margin: 5px auto;
+    }
+
+
+    #recipeout {
+        height: 320px;
+    }
+
+
+    #multiplierTab,
+    #portionTab {
+        font-size: 16px;
+    }
+
+    #multiLabel,
+    #oyieldLabel,
+    #dyieldLabel {
+        font-size: 16px;
+    }
+
+    #multiplyButton,
+    #divideButton,
+    #portionButton {
+        font-size: 16px;
+    }
+
+    #multiplier,
+    #oyield,
+    #dyield {
+        font-size: 16px;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    #mainContainer .content-section {
+        max-width: 1100px;
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px 0;
+    }
+
+    #recipeInput {
+        clear: none;
+        display: block;
+        float: left;
+        height: 740px;
+        width: 49.75%;
+        margin-left: 0;
+        color: #eee;
+        background-color: #333;
+    }
+
+    #convertedBlock {
+        clear: none;
+        display: block;
+        float: left;
+        height: 740px;
+        width: 49.75%;
+        margin-left: 0.5%;
+        margin-top: 0;
+        color: #eee;
+        background-color: #333;
+    }
+
+    #recipeout {
+        height: 570px;
+    }
+
+}
+
+
+#clearListButton {
+    float: left;
+    height: 30px;
+    background-color: #FF9999;
+    margin: 0;
+}
+
+#tabs {
+    margin-bottom: 0;
+}
+
+#multiplierBlock {
+    height: 120px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin: 0 20px 10px 10px;
+    background-color: #eee;
+}
+
+#portionBlock {
+    display: none;
+    height: 120px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin: 0 20px 10px 10px;
+    background-color: #eee;
+}
+
+#mainContainer .btn {
+    clear: none;
+    display: block;
+    float: left;
+    color: #555;
+    border: solid 1px #333;
+    text-align: center;
+    outline: none;
+    padding: 5px;
+}
+
+#mainContainer .btn:hover,
+#mainContainer .btn2:hover,
+#mainContainer .btnR:hover {
+    border: 2px solid #555;
+}
+
+#clearListButton:active,
+#multiplyButton:active,
+#divideButton:active,
+#portionButton:active,
+#clearRecipeButton:active,
+#printRecipeButton:active {
+    background-color: #ccc;
+}
+
+#mainContainer .btn2 {
+    clear: none;
+    display: block;
+    color: #555;
+    border: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+#mainContainer .btnR {
+    clear: none;
+    display: block;
+    color: #555;
+    border: 0;
+    text-align: center;
+    padding: 5px;
+}
+
+#mainContainer .inputTop {
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#mainContainer .opertop {
+    clear: none;
+    display: block;
+    float: left;
+    width: 5%;
+    height: auto;
+    text-align: right;
+    color: #555;
+    margin: 5px 0px 0px 2%;
+}
+
+#mainContainer .inputBar {
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+#clearRecipeButton {
+    height: 40px;
+    background-color: #FF9999;
+}
+
+#printRecipeButton {
+    height: 40px;
+    margin: 0 5px 0 0;
+    background-color: #eee;
+}

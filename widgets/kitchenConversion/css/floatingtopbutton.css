@@ -1,0 +1,83 @@
+#floatingTopButton {
+    font-family: 'Roboto', Arial, sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 70px;
+    right: 25px;
+    z-index: 10;
+    visibility: hidden;   
+    cursor: pointer; 
+    background-color: #ffffff70;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#floatingTopButton .floating-top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    margin-right: 0;
+    margin-bottom: 2px;
+}
+
+#floatingTopButton .floating-top-button i {    
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+#floatingTopButton span {    
+    font-size: 16px;
+    color: #333;
+    opacity: 0.7;
+}
+
+#floatingTopButton:hover,
+#floatingTopButton:active {
+    background-color: white;
+}
+
+#floatingTopButton:hover #floatingTopText,
+#floatingTopButton:active #floatingTopText {
+    color: #1e90ff;
+}
+
+#floatingTopButton:hover #floatingTopIcon,
+#floatingTopButton:active #floatingTopIcon {
+    background-color: #1e90ff;
+}
+
+
+/* Disable hovering effects for mobile/touch applications */
+@media (hover: none) {
+    #floatingTopButton:hover {
+        background-color: #ffffff70;
+    }
+    
+    #floatingTopButton:hover #floatingTopText {
+        color: #333;
+    }
+    
+    #floatingTopButton:hover #floatingTopIcon {
+        background-color: #333;
+    }
+}
+
+/* Mobile Layout: 800px and on. */
+@media only screen and (min-width: 800px) {
+    #floatingTopButton {
+        flex-direction: row;
+    }
+    #floatingTopButton .floating-top-button {
+        margin-right: 5px;
+        margin-bottom: 0;
+    }
+}

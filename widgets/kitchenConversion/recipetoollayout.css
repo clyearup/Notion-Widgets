@@ -38,13 +38,13 @@
 #mainContainer p {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-    font-size: 8px;
+    font-size: 12px;
     margin: 5px;
     line-height: 1;
 }
 
 #mainContainer ol {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1;
     margin: 5px auto;
     padding: 0 5px 0 5px;
@@ -52,7 +52,7 @@
 
 
 #mainContainer li {
-    font-size: 8px;
+    font-size: 12px;
     margin: 0;
 }
 
@@ -69,40 +69,11 @@
 
 
 #mainContainer .content-section {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     padding: 5px 0;
 }
 
-#mainContainer .content-section.card-style {
-    padding: 10px;
-    background-color: white;
-    box-shadow: 0 2px 5px 0 gray;
-    margin: 5px auto;
-}
-
-#recipeConverterInstructions h3 {
-    font-family: 'Roboto', sans-serif;
-}
-
-
-#mainContainer .tool-title-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 5px;
-}
-
-#mainContainer .share-block {
-    margin: 5px;
-}
-
-#mainContainer .share-icon {
-    margin: 0 5px;
-}
 
 #mainContainer .center {
     text-align: center;
@@ -121,7 +92,7 @@
 }
 
 #mainContainer .left-margin {
-    margin-left: 5px;
+    margin-left: 1px;
 }
 
 #mainContainer .no-margin {
@@ -170,21 +141,6 @@
 }
 
 
-.row.bottom-note {
-    margin: 5px 5px 5px 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.row.bottom-note div {
-    margin-bottom: 5px;
-}
-
-.row.title {
-    margin: 5px 5px 0 5px;
-}
-
 .row.tabs {
     overflow: hidden;
 }
@@ -193,25 +149,11 @@
     width: 50%;
 }
 
-
-#recipeTitle {
-    height: 20px;
-}
-
-#howNote {
-    margin-right: 5px;
-}
-
-#recipeConverterInstructions img {
-    margin: 5px 0;
-}
-
-
 #converterTool {
     display: flex;
     flex-wrap: wrap;
-    font-size: 8px;
-    width: 50%;
+    font-size: 12px;
+    width: 75%;
     color: #333;
     margin: 5px auto;
 }
@@ -226,15 +168,10 @@
     background-color: #333;
 }
 
-#recipeTitle {
-    width: 100%;
-    font-size: 8px;
-}
-
 #recipein {
     width: 100%;
-    font-size: 8px;
-    height: 100px;
+    font-size: 12px;
+    height: 175px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
@@ -243,7 +180,7 @@
     height: 20px;
     width: 100%;
     margin: 0;
-    font-size: 10px;
+    font-size: 12px;
     background-color: #eee;
     border: 0;
     border-radius: 0;
@@ -255,7 +192,7 @@
     height: 20px;
     width: 100%;
     margin: 0;
-    font-size: 10px;
+    font-size: 12px;
     background-color: #999;
     border: 0;
     border-radius: 0;
@@ -271,7 +208,7 @@
     float: left;
     width: 28%;
     height: auto;
-    font-size: 10px;
+    font-size: 12px;
     margin: 5px 0px 0px 2%;
     color: #555;
 }
@@ -282,9 +219,9 @@
     display: block;
     float: left;
     width: 5%;
-    height: 10px;
+    height: 12px;
     text-align: right;
-    font-size: 30px;
+    font-size: 12px;
     line-height: 30px;
     color: #555;
     margin-left: 2%;
@@ -306,40 +243,40 @@
 #multiplier,
 #oyield,
 #dyield {
-    width: 100%;
+    width: 80%;
     height: 50%;
     font-size: 8px;
-    text-align: center;
+    text-align: left;
 }
 
 #multiplyButton {
-    width: 28%;
+    width: 20%;
     height: 20px;
-    font-size: 8px;
-    margin-left: 2%;
+    font-size: 12px;
+    margin-left: 5%;
     background-color: #b8edff;
 }
 
 #multiplyButton span,
 #divideButton span {
-    font-size: 8px;
+    font-size: 12px;
 }
 
 #divideButton {
-    width: 28%;
+    width: 20%;
     height: 20px;
-    font-size: 8px;
-    margin-left: 2%;
-    margin-right: 2%;
+    font-size: 12px;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: #d0b2e7;
 }
 
 #portionButton {
-    width: 28%;
+    width: 20%;
     height: 20px;
-    font-size: 8px;
-    margin-left: 2%;
-    margin-right: 2%;
+    font-size: 12px;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: #c9e4a5;
 }
 
@@ -366,7 +303,7 @@
 
 @media only screen and (min-width: 768px) {
     #converterTool {
-        font-size: 8px;
+        font-size: 12px;
         margin: 5px auto;
     }
 
@@ -378,19 +315,19 @@
 
     #multiplierTab,
     #portionTab {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     #multiLabel,
     #oyieldLabel,
     #dyieldLabel {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     #multiplyButton,
     #divideButton,
     #portionButton {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     #multiplier,
@@ -414,7 +351,7 @@
         clear: none;
         display: block;
         float: left;
-        height: 260px;
+        height: 350px;
         width: 49.75%;
         margin-left: 0;
         color: #eee;
@@ -425,7 +362,7 @@
         clear: none;
         display: block;
         float: left;
-        height: 260px;
+        height: 350px;
         width: 49.75%;
         margin-top: 0;
         color: #eee;
@@ -433,7 +370,7 @@
     }
 
     #recipeout {
-        height: 140px;
+        height: 275px;
     }
 
 }
@@ -451,19 +388,15 @@
 }
 
 #multiplierBlock {
-    height: 40px;
-    margin-top: 0;
-    margin-bottom: 0px;
-    margin: 0 5px 5px 5px;
+    height: 60px;
+    margin: 5px 5px 5px 5px;
     background-color: #eee;
 }
 
 #portionBlock {
     display: none;
-    height: 40px;
-    margin-top: 0;
-    margin-bottom: 5px;
-    margin: 0 5px 5px 5px;
+    height: 60px;
+    margin: 5px 5px 5px 5px;
     background-color: #eee;
 }
 
@@ -487,8 +420,7 @@
 #multiplyButton:active,
 #divideButton:active,
 #portionButton:active,
-#clearRecipeButton:active,
-#printRecipeButton:active {
+#clearRecipeButton:active {
     background-color: #ccc;
 }
 

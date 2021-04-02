@@ -48,62 +48,28 @@ document.getElementById("app").innerHTML = `
   </span>
 </div>
 `;
-
-function incrementSec(){
-  timeLimit++;
-  timeLeft++;
-  document.getElementById("base-timer-label").innerHTML = formatTime(
-    timeLeft
-  );
-}
-function decrementSec(){
-  timeLimit--;
-  timeLeft--;
-  document.getElementById("base-timer-label").innerHTML = formatTime(
-    timeLeft
-  );
-}
-function incrementMin(){
-  timeLimit+=60;
-  timeLeft+=60;
-  document.getElementById("base-timer-label").innerHTML = formatTime(
-    timeLeft
-  );
-}
-function decrementMin(){
-  timeLimit-=60;
-  timeLeft-=60;
-  document.getElementById("base-timer-label").innerHTML = formatTime(
-    timeLeft
-  );
-}
-function incrementTenMin(){
-  timeLimit+=600;
-  timeLeft+=600;
-  document.getElementById("base-timer-label").innerHTML = formatTime(
-    timeLeft
-  );
-}
-function decrementTenMin(){
-  timeLimit-=600;
-  timeLeft-=600;
-  document.getElementById("base-timer-label").innerHTML = formatTime(
-    timeLeft
-  );
-}
-
 function onTimesUp() {
   clearInterval(timerInterval);
 }
 
-function resetTimer() {
+function resetTimer(time) {
+  const { alert, warning, info } = COLOR_CODES;
   clearInterval(timerInterval);
-  timeLimit = 600;
+  timeLimit = time;
   timeLeft = timeLimit;
   timePassed = 0;
   document.getElementById("base-timer-label").innerHTML = formatTime(
     timeLeft
   );
+  document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+  document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(alert.color);
+  document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(info.color);
 }
 
 function startTimer() {
@@ -116,9 +82,10 @@ function startTimer() {
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
-    if (timeLeft === 0) {
+    if ((timeLeft <= 0)) {
       onTimesUp();
       play();
+      resetTimer(0);
     }
   }, 1000);
 }
@@ -170,4 +137,54 @@ function setCircleDasharray() {
 function play() {
   var audio = new Audio('https://www.freesoundslibrary.com/wp-content/uploads/2020/03/single-ding-sound-effect.mp3');
   audio.play();
+}
+
+//////////////////////////////////// INCREMENTERS
+function incrementSec(){
+  timeLimit++;
+  timeLeft++;
+  document.getElementById("base-timer-label").innerHTML = formatTime(
+    timeLeft
+  );
+}
+
+function incrementMin(){
+  timeLimit+=60;
+  timeLeft+=60;
+  document.getElementById("base-timer-label").innerHTML = formatTime(
+    timeLeft
+  );
+}
+
+function incrementTenMin(){
+  timeLimit+=600;
+  timeLeft+=600;
+  document.getElementById("base-timer-label").innerHTML = formatTime(
+    timeLeft
+  );
+}
+
+/////////////////////////////////// DECREMENTERS
+function decrementSec(){
+  timeLimit--;
+  timeLeft--;
+  document.getElementById("base-timer-label").innerHTML = formatTime(
+    timeLeft
+  );
+}
+
+function decrementMin(){
+  timeLimit-=60;
+  timeLeft-=60;
+  document.getElementById("base-timer-label").innerHTML = formatTime(
+    timeLeft
+  );
+}
+
+function decrementTenMin(){
+  timeLimit-=600;
+  timeLeft-=600;
+  document.getElementById("base-timer-label").innerHTML = formatTime(
+    timeLeft
+  );
 }

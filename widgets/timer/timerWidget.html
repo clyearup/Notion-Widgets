@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer Widget</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+
+    <div>
+      <button onclick="startTimer()">▶</button>  
+      <button onclick="resetTimer()">RESET</button>  
+      <button onclick="onTimesUp()">■</button> 
+    </div>
+
+    <div>
+      <button onclick="incrementTenMin()">+10m</button>
+      <button onclick="incrementMin()">+1m</button>
+      <button onclick="incrementSec()">+1s</button>
+      <div id="app"></div>
+      <button onclick="decrementTenMin()">-10m</button>
+      <button onclick="decrementMin()">-1m</button>
+      <button onclick="decrementSec()">-1s</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>

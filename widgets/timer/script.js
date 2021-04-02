@@ -1,7 +1,7 @@
 
 const FULL_DASH_ARRAY = 283;
-const WARNING_THRESHOLD = 10;
-const ALERT_THRESHOLD = 5;
+const WARNING_THRESHOLD = 30;
+const ALERT_THRESHOLD = 10;
 
 const COLOR_CODES = {
   info: {
@@ -50,29 +50,33 @@ document.getElementById("app").innerHTML = `
 `;
 function onTimesUp() {
   clearInterval(timerInterval);
+  document.getElementById("startBtn").disabled = false;
 }
 
-function resetTimer(time) {
-  const { alert, warning, info } = COLOR_CODES;
-  clearInterval(timerInterval);
-  timeLimit = time;
-  timeLeft = timeLimit;
-  timePassed = 0;
-  document.getElementById("base-timer-label").innerHTML = formatTime(
-    timeLeft
-  );
-  document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(warning.color);
-  document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(alert.color);
-  document
-      .getElementById("base-timer-path-remaining")
-      .classList.add(info.color);
+function resetTimer() {
+  // const { alert, warning, info } = COLOR_CODES;
+  location.reload(); 
+  // timerInterval = null;
+  // timeLimit = time;
+  // timeLeft = timeLimit;
+  // timePassed = 0;
+  // document.getElementById("base-timer-label").innerHTML = formatTime(
+  //   timeLeft
+  // );
+  // document
+  //     .getElementById("base-timer-path-remaining")
+  //     .classList.remove(warning.color);
+  // document
+  //     .getElementById("base-timer-path-remaining")
+  //     .classList.remove(alert.color);
+  // document
+  //     .getElementById("base-timer-path-remaining")
+  //     .classList.add(info.color);
 }
 
 function startTimer() {
+  document.getElementById("startBtn").disabled = true;
+  setRemainingPathColor(timeLeft);
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = timeLimit - timePassed;
@@ -85,7 +89,12 @@ function startTimer() {
     if ((timeLeft <= 0)) {
       onTimesUp();
       play();
-      resetTimer(0);
+      timeLeft = 0;
+      timePassed = 0;
+      timeLimit = 0;
+      document.getElementById("base-timer-label").innerHTML = formatTime(
+        timeLeft
+      );
     }
   }, 1000);
 }
@@ -103,13 +112,26 @@ function formatTime(time) {
 
 function setRemainingPathColor(timeLeft) {
   const { alert, warning, info } = COLOR_CODES;
-  if (timeLeft <= alert.threshold) {
+  
+  if (timeLeft > warning.threshold){
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(alert.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(info.color);
+
+  }else if (timeLeft <= alert.threshold) {
     document
       .getElementById("base-timer-path-remaining")
       .classList.remove(warning.color);
     document
       .getElementById("base-timer-path-remaining")
       .classList.add(alert.color);
+      
   } else if (timeLeft <= warning.threshold) {
     document
       .getElementById("base-timer-path-remaining")
